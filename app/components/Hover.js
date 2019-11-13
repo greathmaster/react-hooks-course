@@ -1,14 +1,17 @@
-import React from 'react'
+/**
+ * This component is no longer used. It is here as a reference
+ */
+import React from "react";
 
 export default class Hover extends React.Component {
-  state = { hovering: false }
-  mouseOver = () => this.setState({ hovering: true })
-  mouseOut = () => this.setState({ hovering: false })
-  render () {
-    return (
-      <div onMouseOver={this.mouseOver} onMouseOut={this.mouseOut}>
-        {this.props.children(this.state.hovering)}
-      </div>
-    )
-  }
+	state = { hovering: false };
+	mouseOver = () => this.setState({ hovering: true });
+	mouseOut = () => this.setState({ hovering: false });
+	render() {
+		return (
+			<div onMouseOver={this.mouseOver} onMouseOut={this.mouseOut}>
+				{this.props.children(this.state.hovering)}
+			</div>
+		);
+	}
 }
